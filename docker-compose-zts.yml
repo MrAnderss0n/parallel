@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  zts:
+    image: zts
+    container_name: zts
+    build:
+      context: .
+      dockerfile: docker/zts/Dockerfile
+
+networks:
+  default:
+    external:
+      name: php-threading
